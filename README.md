@@ -6,7 +6,7 @@ is a simple Python Skript Setup the Blender Settings with 5 clicks.
 2. Go to the `Scripting`-Area in The Blender Interface.      
 3. Click on `OPEN`-Button in the Text-Editor.       
 4. Select the Scrypt File.      
-  * Edit the File. 
+* Edit the File if you wnat to do this. 
 5. Click on the `Play`-Button to execute the Script.
 
 ## What is this?
