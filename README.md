@@ -2,11 +2,11 @@
 is a simple Python Skript Setup the Blender Settings with 5 clicks.
 
 ## How To Use
-1. Start Blender.
-2. Go to the `Scripting`-Area in The Blender Interface.
-3. Click on `OPEN`-Button in the Text-Editor.
-4. Select the Scrypt File.
-  4.1. Edit the File. 
+1. Start Blender.      
+2. Go to the `Scripting`-Area in The Blender Interface.      
+3. Click on `OPEN`-Button in the Text-Editor.       
+4. Select the Scrypt File.      
+  * Edit the File. 
 5. Click on the `Play`-Button to execute the Script.
 
 ## What is this?
