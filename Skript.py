@@ -18,8 +18,8 @@ BlenderRenderConfig.film_transparent           = True;
 BlenderRenderConfig.fps                        = 25;
 
 #Cycles Settings
-BlenderRenderCycles.samples                    = 200;
-BlenderRenderCycles.aa_samples                 = 200;
+BlenderRenderCycles.samples                    = rendertime_reducing;
+BlenderRenderCycles.aa_samples                 = rendertime_reducing;
 BlenderRenderCycles.device                     = 'GPU';
 BlenderRenderCycles.use_denoising              = True;
 BlenderRenderCycles.use_preview_denoising      = True;
