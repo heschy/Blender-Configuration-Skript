@@ -1,5 +1,6 @@
 import bpy;
 
+rendertime_reducing = 200;
 #Init
 BlenderRenderCycles                            = bpy.data.scenes['Scene'].cycles;
 BlenderRenderEevee                             = bpy.data.scenes['Scene'].eevee;
