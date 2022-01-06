@@ -1,9 +1,9 @@
 import bpy;
 
-BlenderRenderCycles                            = bpy.data.scenes['Scene'].cycles;
-BlenderRenderEevee                             = bpy.data.scenes['Scene'].eevee;
-BlenderRenderConfig                            = bpy.data.scenes['Scene'].render;
-bpy.data.scenes['Scene'].use_nodes             = True;
+BlenderRenderCycles                            = bpy.context.scene.cycles;
+BlenderRenderEevee                             = bpy.context.scene.eevee;
+BlenderRenderConfig                            = bpy.context.scene.render;
+bpy.context.scene.use_nodes                    = True;
 
 BlenderRenderConfig.engine                     = 'CYCLES';
 BlenderRenderConfig.tile_x                     = 128;
@@ -38,8 +38,3 @@ BlenderRenderEevee.use_bloom                   = True;
 BlenderRenderEevee.use_ssr                     = True;
 BlenderRenderEevee.taa_render_samples          = 500;
 BlenderRenderEevee.taa_samples                 = 0;
-
-
-# Delete the '#' in the folowing 2 lines if you want to render a 4K-HD-Image:
-#bpy.data.scenes["Scene"].render.resolution_x = 3840
-#bpy.data.scenes["Scene"].render.resolution_y = 2160

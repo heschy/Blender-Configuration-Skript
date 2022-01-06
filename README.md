@@ -1,30 +1,47 @@
-# Blender-Configuration-Skript
-is a simple Python Skript Setup the Blender Settings with 5 clicks.
+# Blender-Configuration-Script
+Blender Configuration Script is a collection of Python-scrypts  you can use to get the settings you want just with 5 clicks. 
 
 ## How To Use
 1. Start Blender.      
-2. Open the `Text Editor`.      
-3. Click on `OPEN`-Button in the Text-Editor.       
-4. Select the Script File.      
+2. Open the `Text Editor`-Panel.      
+3. Click on `OPEN`.       
+4. Select the Script you want to use.      
 5. Click on the `Play`-Button to execute the Script.
 
-## What is this?
-This is a Python Script, Blender uses Python to do anything.
-With a simple Pyhton Script you can change the Settings of Blender with 2 Clicks: Open and Run.
+## Scripts
 
-This Python Scrypt is realy simple. Here are a few Lines you will change sometimes:
+### 360.py
+#### Content
+```python
+from bpy import *;
 
+camname = '360°_camera';
+size    = [4000,2000];
+
+context.scene.render.engine                     = 'CYCLES';
+data.objects[camname].data.type                 = 'PANO';
+data.objects[camname].data.cycles.panorama_type = 'EQUIRECTANGULAR';
+context.scene.render.resolution_x               = size[0];
+context.scene.render.resolution_y               = size[1];
 ```
-8 - BlenderRenderConfig.engine  = 'CYCLES';
-10 - BlenderRenderConfig.use_lock_interface = True;
-15 - BlenderRenderConfig.fps = 25;
-```
+#### Test
 
-In Line 10 I set the `Render Engine` property to  `'CYCLES'`. This is because I use Cycles everytime wehen I Render something.
-Cycles is a `Physic Based Render-Engine`. You need Cycles for Transparent Materials Like Water, Glass, and a completly Transparent Material.
-For realitic Reflactions you need Cycles too. Cycles is perfect for Movies and realitic Images. The Rendertime is not so fast but you can reduce Rendertime
-if you reduce the samples ( Propertys for the Samples are here: 20, 21 25,26,40,41).
+This script is tested with:
 
-In Line 12 the Scrypt sets the `LockInterface`-Property because this reduces the Rendertime.
+- Blender 3.0 `beta`
+- Blender 2.93.5
+- Blender 2.92.0
 
-By default the FPS-Value is 24, my Script sets this Value to 25 because this is simpier to use then 24. You can edit this Property in Line 17.
+This script works with:
+
+[X] Blender 3.0 `beta`
+[X] Blender 2.93.5
+[X] Blender 2.92.0
+
+#### Usage
+
+You can run ``360.py` if you want to render a 360° scene.
+
+##### Important:
+You have to rename the camera before executing the script.
+The new name has to be: `360°_camera`. After executing the Script, you can change the cameras name, if you want.
