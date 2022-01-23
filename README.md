@@ -3,45 +3,21 @@ Blender Configuration Script is a collection of Python-scrypts  you can use to g
 
 ## How To Use
 1. Start Blender.      
-2. Open the `Text Editor`-Panel.      
-3. Click on `OPEN`.       
-4. Select the Script you want to use.      
-5. Click on the `Play`-Button to execute the Script.
+2. In the Top-left Menubar click edit
+3. In edit click Preferences
+4. Select Addons
+5. Click install
+6. Choose the Addon you want to install. (360.py is used to set up 360° Scenes and default.py is used to improve your render Quality)
+7. Down left select the thre rows and click on Save Preferences
+8. Close the Preferences Window and start blending you scene
 
-## Scripts
 
-### 360.py
-#### Content
-```python
-from bpy import *;
 
-camname = '360°_camera';
-size    = [4000,2000];
+### Compatibility
 
-context.scene.render.engine                     = 'CYCLES';
-data.objects[camname].data.type                 = 'PANO';
-data.objects[camname].data.cycles.panorama_type = 'EQUIRECTANGULAR';
-context.scene.render.resolution_x               = size[0];
-context.scene.render.resolution_y               = size[1];
-```
-#### Test
-
-This script is tested with:
-
-- Blender 3.0 `beta`
-- Blender 2.93.5
-- Blender 2.92.0
-
-This script works with:
-
-[X] Blender 3.0 `beta`
-[X] Blender 2.93.5
-[X] Blender 2.92.0
-
-#### Usage
-
-You can run ``360.py` if you want to render a 360° scene.
+The Scripts work for the Blender 2.8 and 2.9 Series. The Blender 3.0 Series uses a different API and is incompatible with the addons.
 
 ##### Important:
-You have to rename the camera before executing the script.
+You have to rename the camera before executing the 360.py script.
 The new name has to be: `360°_camera`. After executing the Script, you can change the cameras name, if you want.
+But when the Script is being executed, the Camera you want to render the 360° Images/Videos with needs to have this name. If the Camera doesn't have this Name, the addon is unable to find your camera. This ISsue will be improved soon. But first I am creating [another cool Addon for Blender](https://github.com/heschy/Stargate-Generator)!
