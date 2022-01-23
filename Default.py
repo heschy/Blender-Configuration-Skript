@@ -31,7 +31,7 @@ class HESCHY_CONFIG_SCRIPT_OT_mainop(bpy.types.Operator):
         BlenderRenderConfig.use_save_buffers           = True;
         BlenderRenderConfig.use_persistent_data        = True;
         BlenderRenderConfig.film_transparent           = True;
-        BlenderRenderConfig.fps                        = 25;
+        BlenderRenderConfig.fps                        = 60;
 
         BlenderRenderCycles.samples                    = 50;
         BlenderRenderCycles.aa_samples                 = 50;
