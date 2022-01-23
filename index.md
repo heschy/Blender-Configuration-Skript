@@ -1,3 +1,4 @@
+# Blender Configuration Scripts
 ## What is it?
 BLender Configuration Script (aka `Heschy Render Config`/`Heschy Render Settings`) is an addon for Blender.     
 It changes your Render settings, in order to get more realistic images. Of course it wont set your configurations to the optimum,    
