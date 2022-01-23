@@ -1,11 +1,24 @@
 import bpy;
 
+bl_info = {
+    "name": "Heschy Render Settings",
+    "description": "Improve your Render Settings, with one click.",
+    "author": "Henry Schynol",
+    "version": (1, 0),
+    "blender": (2, 92, 0),
+    "location": "View3D > Toolbar > View > Heschy Render Settings",
+    "warning": "This Addon cannot be used in Blender 3.0 or higher!", # used for warning icon and text in addons panel
+    "doc_url": "https://github.com/heschy/Blender-Configuration-Skript/wiki",
+    "support": "COMMUNITY",
+    "category": "Render",
+}
+
 class HESCHY_CONFIG_SCRIPT_OT_mainop(bpy.types.Operator):
     """Quick Configuration Tool"""
     bl_label = "Configurate"
     bl_idname = "heschyconfig_nonodes.mainop"
     
-    def exec(self, context):
+    def execute(self, context):
         BlenderRenderCycles                            = bpy.context.scene.cycles;
         BlenderRenderEevee                             = bpy.context.scene.eevee;
         BlenderRenderConfig                            = bpy.context.scene.render;
@@ -49,11 +62,11 @@ class HESCHY_CONFIG_SCRIPT_OT_mainop(bpy.types.Operator):
     
 class HESCHY_CONFIG_SCRIPT_PT_mainpanel(bpy.types.Panel):
     """Creates a Panel in the Object properties window"""
-    bl_label = "Hello World Panel"
+    bl_label = "Heschy Render Settings"
     bl_idname = "heschyconfig_nonodes_mainpanel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = "Render"
+    bl_category = "View"
 
     def draw(self, context):
         layout = self.layout
